@@ -2,7 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-# feh --bg-center ~/Pictures/wallpapers/city/bedroom_night_city-1920x1080.png
+# feh --bg-center ~/.config/wallpapers/city/bedroom_night_city-1920x1080.png
 
 $HOME/.config/polybar/launch.sh &
 picom --config $HOME/.config/picom/picom.conf &
