@@ -27,10 +27,11 @@ else
     bspc monitor -d 1 2 3 4 5 6 7 8 9 10
     bspc monitor -f ^1
 fi
+bspc desktop --focus 1
 
 # bspc monitor -d I II III IV V VI VII VIII IX X
 
-xwinwrap -ov -ni -g 1920x1080+1920+0 -- mpv -wid WID --hwdec=auto ~/Pictures/wallpapers/animated/bedroom_futuristic_night_1920x1080.mp4 \
+xwinwrap -ov -ni -g 1920x1080+1920+0 -- mpv -wid WID --hwdec=auto ~/.config/wallpapers/animated/bedroom_futuristic_night_1920x1080.mp4 \
 	--no-osc --no-osd-bar --loop-file --player-operation-mode=cplayer --no-audio --panscan=1.0 --no-input-default-bindings &
 
 xwinwrap -ov -ni -g 1920x1080+0+0 -- mpv -wid WID --hwdec=auto ~/Pictures/wallpapers/animated/bedroom_futuristic_night_1920x1080.mp4 \
