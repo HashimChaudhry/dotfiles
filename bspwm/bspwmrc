@@ -1,10 +1,12 @@
 #!/bin/sh
 
+killall -q picom xwinwrap sxhkd 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 # feh --bg-center ~/.config/wallpapers/city/bedroom_night_city-1920x1080.png
 
 $HOME/.config/polybar/launch.sh &
+sleep 0.2
 picom --config $HOME/.config/picom/picom.conf &
 xmodmap $HOME/.Xmodmap &
 
@@ -30,13 +32,9 @@ fi
 bspc desktop --focus 1
 
 # bspc monitor -d I II III IV V VI VII VIII IX X
+xwinwrap -b -nf -ov -ni -g 1920x1080+1920+0 -- mpv -wid WID --fps=30 -vo=gpu --hwdec=auto ~/.config/wallpapers/animated/bedroom_futuristic_night_1920_1080.mp4 --no-osc --no-osd-bar --loop-file --player-operation-mode=cplayer --no-audio --panscan=1.0 --no-input-default-bindings & 
 
-xwinwrap -ov -ni -g 1920x1080+1920+0 -- mpv -wid WID --hwdec=auto ~/.config/wallpapers/animated/bedroom_futuristic_night_1920x1080.mp4 \
-	--no-osc --no-osd-bar --loop-file --player-operation-mode=cplayer --no-audio --panscan=1.0 --no-input-default-bindings &
-
-xwinwrap -ov -ni -g 1920x1080+0+0 -- mpv -wid WID --hwdec=auto ~/Pictures/wallpapers/animated/bedroom_futuristic_night_1920x1080.mp4 \
-      --no-osc --no-osd-bar --loop-file --player-operation-mode=cplayer --no-audio --panscan=1.0 --no-input-default-bindings &
-
+xwinwrap -b -ov -nf -ni -g 1920x1080+0+0 -- mpv -wid WID --fps=30 -vo=gpu --hwdec=auto ~/.config/wallpapers/animated/bedroom_futuristic_night_1920_1080.mp4 --no-osc --no-osd-bar --loop-file --player-operation-mode=cplayer --no-audio --panscan=1.0 --no-input-default-bindings &
 
 
 bspc config border_width         2
