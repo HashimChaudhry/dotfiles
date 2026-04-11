@@ -28,10 +28,14 @@ else
     # Assign all desktops to a dummy monitor (usually the first detected or default)
     bspc monitor -d 1 2 3 4 5 6 7 8 9 10
     bspc monitor -f ^1
+
 fi
 bspc desktop --focus 1
 
-# bspc monitor -d I II III IV V VI VII VIII IX X
+# Active window border color
+bspc config focused_border_color "#00FFFF"
+
+# Live wallpaper
 xwinwrap -b -nf -ov -ni -g 1920x1080+1920+0 -- mpv -wid WID --fps=30 -vo=gpu --hwdec=auto ~/.config/wallpapers/animated/bedroom_futuristic_night_1920_1080.mp4 --no-osc --no-osd-bar --loop-file --player-operation-mode=cplayer --no-audio --panscan=1.0 --no-input-default-bindings & 
 
 xwinwrap -b -ov -nf -ni -g 1920x1080+0+0 -- mpv -wid WID --fps=30 -vo=gpu --hwdec=auto ~/.config/wallpapers/animated/bedroom_futuristic_night_1920_1080.mp4 --no-osc --no-osd-bar --loop-file --player-operation-mode=cplayer --no-audio --panscan=1.0 --no-input-default-bindings &
@@ -39,6 +43,7 @@ xwinwrap -b -ov -nf -ni -g 1920x1080+0+0 -- mpv -wid WID --fps=30 -vo=gpu --hwde
 
 bspc config border_width         2
 bspc config window_gap         	 22
+bspc config top_padding 		 40
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
