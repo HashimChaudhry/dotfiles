@@ -1,22 +1,21 @@
 # Default to dracula theme
-general.import = ["/home/hashim/dotfiles/alacritty/dracula.toml"]
+general.import = ["/home/hashim/dotfiles/alacritty/tokyo-night-default.toml"]
 
 [window]
-opacity = 0.85
+opacity = 0.80
 padding = {x = 10, y = 10}
 
 [colors.primary]
-background = "#282A36"
 
 [font.normal]
-family = "JetBrains Mono Nerd Font"
+family = "JetBrainsMono Nerd Font"
 style = "Regular"
 
 [font.bold]
-family = "JetBrains Mono Nerd Font"
+family = "JetBrainsMono Nerd Font"
 style = "Bold"
 
 [font.italic]
-family = "JetBrains Mono Nerd Font"
+family = "JetBrainsMonoNerdFont"
 style = "Italic"
 

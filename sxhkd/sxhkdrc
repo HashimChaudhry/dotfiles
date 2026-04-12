@@ -133,3 +133,18 @@ XF86Audio{Raise,Lower}Volume
 
 XF86AudioMute
 	pactl set-sink-mute @DEFAULT_SINK@ toggle 
+
+# 
+# Hide and unhide windows
+#
+super + v
+    bspc node -g hidden
+
+# Unhide the last hidden window
+super + shift + v
+    bspc node $(bspc query -N -n .hidden | tail -n1) -g hidden=off
+
+
+# Toggle floating and close
+super + shift + w
+    bspc node -t floating; bspc node -c
