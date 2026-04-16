@@ -6,6 +6,15 @@ opacity = 0.80
 padding = {x = 10, y = 10}
 
 [colors.primary]
+background = "#000C16"
+foreground = "#00FFFF"
+
+[colors.cursor]
+background = "#000C16"
+foreground = "#00FFFF"
+
+[colors.selection]
+text = "#00FFFF"
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
