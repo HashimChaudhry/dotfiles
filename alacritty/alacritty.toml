@@ -6,11 +6,11 @@ opacity = 0.80
 padding = {x = 10, y = 10}
 
 [colors.primary]
-background = "#000C16"
+background = "#0B0F1A"
 foreground = "#00FFFF"
 
 [colors.cursor]
-background = "#000C16"
+background = "#0B0F1A"
 foreground = "#00FFFF"
 
 [colors.selection]
