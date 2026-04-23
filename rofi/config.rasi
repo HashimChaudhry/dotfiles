@@ -7,6 +7,12 @@ configuration {
 	icon-theme: "Papirus";
 	application-fallback-icon: "exec";
 	monitor: "-4";
+    kb-move-char-back: "";
+    kb-move-char-forward: "";
+    kb-row-left: "Left,Alt+h";
+    kb-row-right: "Right,Alt+l";
+    kb-row-up: "Up,Alt+k";
+    kb-row-down: "Down,Alt+j";
 }
 
 @theme "/dev/null"
