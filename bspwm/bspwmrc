@@ -43,7 +43,7 @@ xwinwrap -b -ov -nf -ni -g 1920x1080+0+0 -- mpv -wid WID --fps=30 -vo=gpu --hwde
 
 bspc config border_width         2
 bspc config window_gap         	 22
-bspc config top_padding 		 40
+bspc config top_padding 		 35 
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
