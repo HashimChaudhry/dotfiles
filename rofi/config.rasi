@@ -5,6 +5,7 @@ configuration {
 	font: "JetBrainsMono Nerd Font Medium 9";
 	modi: "window,run,drun";
 	icon-theme: "Papirus";
+	application-fallback-icon: "exec";
 	monitor: "-4";
 }
 
