@@ -1,6 +1,6 @@
 #!/bin/sh
 
-killall -q picom xwinwrap sxhkd 
+killall -q picom xwinwrap sxhkd dunst
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 # feh --bg-center ~/.config/wallpapers/city/bedroom_night_city-1920x1080.png
@@ -9,6 +9,7 @@ $HOME/.config/polybar/launch.sh &
 sleep 0.2
 picom --config $HOME/.config/picom/picom.conf &
 xmodmap $HOME/.Xmodmap &
+dunst &
 
 if xrandr | grep "HDMI-A-0 connected" >/dev/null && xrandr | grep "DisplayPort-1 connected" >/dev/null; then
     xrandr --output HDMI-A-0 --primary --left-of DisplayPort-1
