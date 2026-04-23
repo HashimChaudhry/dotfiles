@@ -2,7 +2,7 @@ configuration {
 	display-drun: "";
 	drun-display-format: "{icon}{name}";
 	show-icons: true;
-	font: "JetBrainsMono Nerd Font Medium 10";
+	font: "JetBrainsMono Nerd Font Medium 9";
 	modi: "window,run,drun";
 	icon-theme: "Papirus";
 	monitor: "-4";
@@ -11,10 +11,10 @@ configuration {
 @theme "/dev/null"
 
 * {
-	bg: #0B0F1AA8;
+	bg: #0B0F1AC8;
 	bg-alt: #1C2430;
 	
-	input-bg: #4A5665FF;
+	input-bg: #0B0F1AF8;
 	transparent: #00000000;
 
 	fg: #FFFFFF;
@@ -30,7 +30,7 @@ configuration {
 window {
 	transparency: "real";
 	width: 40%;
-	height: 45%;
+	height: 50%;
 }
 
 mainbox {
@@ -38,7 +38,7 @@ mainbox {
 }
 
 listview {
-	columns: 5;
+	columns: 4;
 	margin: 0 20 0 20;
 	background-color: transparent;
 	fixed-columns: true;
@@ -46,12 +46,11 @@ listview {
 }
 
 inputbar {
-	children: [prompt, entry];
-	background-color: @input-bg;
-	border-radius: 0;
+	children: [entry];
 	horizontal-align: 0.5;
-	margin: 20 50;
-	border-radius: 20;
+	background-image: url("~/Pictures/wallpapers/images/observatory.png",width );
+	background-color: @input-bg;
+	padding: 80;
 }
 
 element {
@@ -81,13 +80,9 @@ element-icon {
 }
 
 entry {
-	placeholder: "Search";
+	border-radius: 10px;
+	background-color: inherit;
+	placeholder: " Search";
 	text-color: @fg-alt;
-	padding: 10 10 10 10;
-}
-
-prompt {
-	enabled: true;
-	padding: 10;
-	text-color: @fg-alt;
+	padding: 15;
 }
