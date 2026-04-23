@@ -14,7 +14,7 @@ configuration {
 	bg: #0B0F1AA8;
 	bg-alt: #1C2430;
 	
-	input-bg: #4A5665A8;
+	input-bg: #4A5665FF;
 	transparent: #00000000;
 
 	fg: #FFFFFF;
