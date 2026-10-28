@@ -2,7 +2,7 @@
 general.import = ["/home/hashim/dotfiles/alacritty/tokyo-night-default.toml"]
 
 [window]
-opacity = 0.80
+opacity = 0.85
 padding = {x = 10, y = 10}
 
 [colors.primary]
