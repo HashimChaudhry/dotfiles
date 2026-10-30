@@ -13,7 +13,7 @@ dunst &
 
 if xrandr | grep "HDMI-A-0 connected" >/dev/null && xrandr | grep "DisplayPort-1 connected" >/dev/null; then
     xrandr --output HDMI-A-0 --primary --left-of DisplayPort-1 
-	xrandr --output DisplayPort --rotate left
+	xrandr --output DisplayPort-1 --rotate left
 	bspc wm --reorder-monitors HDMI-A-0 DisplayPort-1
     bspc monitor HDMI-A-0 -d 1 2 3 4 5
     bspc monitor DisplayPort-1 -d 6 7 8 9 10
