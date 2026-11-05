@@ -18,6 +18,7 @@ call plug#begin()
 	Plug 'preservim/nerdtree'
 	Plug 'ghifarit53/tokyonight-vim'
 	Plug 'dense-analysis/ale'
+	Plug 'neoclide/coc.nvim'
 call plug#end()
 
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
