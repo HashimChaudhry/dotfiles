@@ -7,6 +7,7 @@ set backupcopy=yes
 set noundofile
 filetype plugin indent on
 syntax on
+set showcmd
 
 call plug#begin()
     Plug 'Raimondi/delimitMate'
@@ -18,6 +19,7 @@ call plug#begin()
 	Plug 'preservim/nerdtree'
 	Plug 'ghifarit53/tokyonight-vim'
 	Plug 'dense-analysis/ale'
+	Plug 'neoclide/coc.nvim'
 call plug#end()
 
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
@@ -37,6 +39,7 @@ set cursorline
 
 let g:tokyonight_style = 'night' " available: night, storm
 let g:tokyonight_enable_italic = 1
+let g:tokyonight_transparent_background = 1
 colorscheme tokyonight
 
 " colorscheme dracula 
@@ -76,3 +79,46 @@ let g:ale_set_highlights = 1
 " Lint while editing
 let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_on_save = 1
+
+" ==============================
+" CoC Autocomplete
+" ==============================
+
+" Enable filetype detection
+filetype plugin indent on
+
+" Show autocomplete menu
+set completeopt=menuone,noselect
+
+" Show partially typed Vim commands
+set showcmd
+
+" Always show status bar
+set laststatus=2
+
+" Enable syntax highlighting
+syntax on
+
+" Tab selects next suggestion
+inoremap <silent><expr> <Tab>
+      \ coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
+
+" Shift+Tab selects previous suggestion
+inoremap <silent><expr> <S-Tab>
+      \ coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+" Enter confirms autocomplete suggestion
+inoremap <silent><expr> <CR>
+      \ coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+
+" Show documentation with K
+nnoremap <silent> K :call CocActionAsync('doHover')<CR>
+
+" Go to definition
+nmap <silent> gd <Plug>(coc-definition)
+
+" Find references
+nmap <silent> gr <Plug>(coc-references)
+
+" Rename symbol
+nmap <silent> <leader>rn <Plug>(coc-rename)
