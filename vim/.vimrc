@@ -36,18 +36,50 @@ set t_Co=256
 set termguicolors
 " let g:airline_theme='onehalfdark'
 set cursorline
+set cursorlineopt=number
 
 let g:tokyonight_style = 'night' " available: night, storm
 let g:tokyonight_enable_italic = 1
 let g:tokyonight_transparent_background = 1
 colorscheme tokyonight
 
-" colorscheme dracula 
+" =====================================
+" Tokyo Night Transparent Background
+" =====================================
 
+" Main editor
 highlight Normal guibg=NONE ctermbg=NONE
+highlight NormalNC guibg=NONE ctermbg=NONE
 highlight NonText guibg=NONE ctermbg=NONE
-highlight SignColumn guibg=NONE ctermbg=NONE
 highlight EndOfBuffer guibg=NONE ctermbg=NONE
+
+" Line numbers and gutter
+highlight LineNr guibg=NONE ctermbg=NONE
+highlight CursorLineNr guibg=NONE ctermbg=NONE
+highlight SignColumn guibg=NONE ctermbg=NONE
+highlight FoldColumn guibg=NONE ctermbg=NONE
+
+" Cursor line - remove background highlighting
+highlight CursorLine guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight CursorLineNr guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+
+" Status bar - remove reverse highlighting
+highlight StatusLine guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight StatusLineNC guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+
+" Tab bar
+highlight TabLine guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight TabLineFill guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight TabLineSel guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+
+" Split separators
+highlight VertSplit guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight WinSeparator guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+
+" Popup autocomplete
+highlight Pmenu guibg=NONE ctermbg=NONE
+highlight PmenuSbar guibg=NONE ctermbg=NONE
+highlight PmenuThumb guibg=NONE ctermbg=NONE
 
 " Ultisnips directory
 set rtp+=~/.vim
@@ -122,3 +154,13 @@ nmap <silent> gr <Plug>(coc-references)
 
 " Rename symbol
 nmap <silent> <leader>rn <Plug>(coc-rename)
+
+
+" Transparent filename/status bar
+highlight StatusLine guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight StatusLineNC guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight StatusLineTerm guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+highlight StatusLineTermNC guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+ 
+" Prevent reverse highlighting
+set statusline=%f\ %m%r%h%w\ [%{&filetype}]\ %=%l:%c
